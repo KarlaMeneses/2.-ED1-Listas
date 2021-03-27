@@ -160,7 +160,7 @@ void ListaP::suprime(direccionP dir){
 			delete(x);//Elimina la memoria del nodo
 		}
 		else{
-			direccionP ant=dir->ant;
+			direccionP ant=anterior(dir);
 			ant->sig=dir->sig;//dir->sig envia lo que realmente tiene.
 			delete(dir);
 		}
@@ -203,46 +203,3 @@ void ListaP::modifica(direccionP dir,int element){	if (vacia()) {		cout << "Er
  aux = aux->sig;
  }
 */
-
-bool ListaP::IsPalindrome(){
-   if (! this->vacia()) {
-	   string s,f;
-	   NodoL *x= this->PtrElementos;     //here i fill my variable String with all the elements
-	   while (x!=NULL){
-		 f= x->elemento ;
-		 s= s + f;
-		 x= x->sig;
-	   }
-
-	   int le= s.length()-1;            //here i check if the string are palindrome
-	   int middle= s.length()/2;
-	   int i=0;
-	   bool equal= true;
-		   while (i<middle && equal){
-		   if (s[i]!=s[le-i]) {
-			equal= false;
-		   }
-			i++;
-		  }
-		  return equal;
-   }
-}
-
-void ListaP::DeleteRepetidos(){   //delete all the repeated but leave one of the repeated
-	   if (!vacia()) {               // 4,5,6,4,3,2,5= 4,5,6,3,2
-		NodoL *x;
-		x= PtrElementos ;
-		while (x!=NULL){
-		 int D= x->elemento;
-		 NodoL *aux;
-		 aux= x->sig;
-		 while (aux!=NULL){
-		  if (D==aux->elemento) {
-			suprime(aux);
-		  }
-			  aux=aux->sig;
-		 }
-		  x=x->sig;
-		}
-	  }
-}

@@ -11,7 +11,6 @@ using namespace std; //para el string
 struct NodoL{
 	int elemento;//Cuando se crea de guarda un espacio con elem y sig en memoria
 	NodoL* sig; //Puntero a nodo
-    NodoL* ant; //Puntero a nodo
 };
 
 typedef NodoL* direccionP;
@@ -33,6 +32,6 @@ class ListaP{
 		void inserta_primero(int element);//
 		void inserta_ultimo(int element);//
 		void suprime(direccionP dir); //
-		void modifica(direccionP dir,int element); //		string mostrar(); //		//////////////		bool IsPalindrome();		void DeleteRepetidos();
+		void modifica(direccionP dir,int element); //		string mostrar(); //
 };
 #endif

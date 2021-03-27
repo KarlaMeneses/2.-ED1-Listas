@@ -58,16 +58,12 @@ int _tmain(int argc, _TCHAR* argv[])
 	cout<<lista->mostrar()<<endl;   */
 
 
-	ListaP* lista = new ListaP();
+	ListaSM* lista = new ListaSM();
 	lista->inserta_ultimo(1);
 	lista->inserta_ultimo(2);
 	lista->inserta_ultimo(2);
 	lista->inserta_ultimo(4);
 	lista->inserta_ultimo(8);
-    cout<<lista->mostrar()<<endl;
-	lista->suprime(lista->primero());
-	//cout<<lista->IsPalindrome()<<endl;
-	lista->DeleteRepetidos();
 	cout<<lista->mostrar()<<endl;
 	system("pause");
 	return 0;

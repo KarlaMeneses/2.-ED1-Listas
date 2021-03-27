@@ -33,6 +33,6 @@ class ListaP{
 		void inserta_primero(int element);//
 		void inserta_ultimo(int element);//
 		void suprime(direccionP dir); //
-		void modifica(direccionP dir,int element); //		string mostrar(); //		//////////////		bool IsPalindrome();		void DeleteRepetidos();
+		void modifica(direccionP dir,int element); //		string mostrar(); //
 };
 #endif
