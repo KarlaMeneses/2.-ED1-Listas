@@ -9,6 +9,7 @@
 #include <iostream>
 ListaV::ListaV(){
 	longitud=0;
+
 }
 
 direccion ListaV::fin(){

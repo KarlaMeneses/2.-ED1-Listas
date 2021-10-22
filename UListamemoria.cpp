@@ -82,7 +82,7 @@ int ListaSM::longuitud (){
 // new Nodo; mem->new_espacio("elemento,sig"); mem->new_espacio(datosNL);
 void ListaSM::inserta(int dir,int element){
 	int x= mem->new_espacio(datoL); // NodoL* x = new NodoL; //creacion de un nuevo nodo es distinto a null
-	if (x!=NULL) {
+	if (x!=NULO) {
 		mem->poner_dato(x, elementL, element); // x->elemento = e;
 		mem->poner_dato(x, sigL, NULO); // x->sig = NULL;
 		if (vacia()) {
@@ -109,7 +109,7 @@ void ListaSM::inserta(int dir,int element){
 }
 void ListaSM::inserta_primero(int element){
 	int x=mem->new_espacio(datoL); // NodoL* x = new NodoL;
-	if (x!=NULL) {
+	if (x!=NULO) {
 		mem->poner_dato(x, elementL, element); // x->elemento = e;
 		mem->poner_dato(x, sigL, PtrElementos); // x->sig = ptr_elementos
 		longitud++;

@@ -11,8 +11,6 @@ using namespace std;   //without this it makes an error in type string!
 const int MAX=11;
 const int NULO=-1;
 
-const char separadores[12]={' ',',','.','-','_',':',';','"','¿','?','!','¡'};
-
 typedef int direccion;
 
 struct NodoM{
